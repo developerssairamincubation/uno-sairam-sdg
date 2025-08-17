@@ -46,7 +46,7 @@ const FeatureSection = () => {
           
           <div className="flex-1">
             <img
-              src="/src/assets/conference-collaboration.jpg"
+              src="https://www.unifiedcommunications.com/images/topics/2018/Meeting-Spaces-Hero.jpg"
               alt="Conference participants collaborating"
               className="w-full h-auto rounded-xl shadow-lg"
             />
