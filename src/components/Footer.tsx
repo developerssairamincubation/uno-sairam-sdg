@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-accent/30 py-12">
       <div className="max-w-screen-xl mx-auto px-4">
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-row items-center gap-8">
           {/* Logo */}
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/856fcb07989c5ea7a6dec97a13b33dcfedf1ee97?width=258"
