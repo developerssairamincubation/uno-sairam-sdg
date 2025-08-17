@@ -28,7 +28,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full bg-gray-50 py-16">
+    <footer className="w-full bg-accent/30 py-16">
       <div className="flex max-w-screen-xl mx-auto px-4 flex-col items-start">
         <div className="flex justify-between items-start w-full max-md:flex-col max-md:gap-10 mb-16">
           <div className="flex flex-col items-start gap-6 flex-1">
