@@ -17,14 +17,15 @@ const Navbar = () => {
     <header className="w-full bg-white border-b border-gray-200 relative">
       <nav className="flex justify-between items-center w-full max-w-screen-xl mx-auto px-4 py-4">
         <div className="flex w-auto h-10 items-center gap-4">
-    <img
-    src={sairamLogo}
-    alt="Sairam Logo"
-    className="h-10 w-auto object-contain"
-    />
+   
     <img
     src={unoLogo}
     alt="UNO Logo"
+    className="h-10 w-auto object-contain"
+    />
+    <img
+    src={sairamLogo}
+    alt="Sairam Logo"
     className="h-10 w-auto object-contain"
     />
     </div>
