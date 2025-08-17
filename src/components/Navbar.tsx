@@ -16,18 +16,19 @@ const Navbar = () => {
   return (
     <header className="w-full bg-white border-b border-gray-200 relative">
       <nav className="flex justify-between items-center w-full max-w-screen-xl mx-auto px-4 py-4">
-        <div className="flex w-20 h-10 justify-center items-center relative">
-          <img
-            src={sairamLogo}
-            alt="Sairam Logo"
-            className="absolute h-10 w-auto object-contain"
-          />
-          <img
-            src={unoLogo}
-            alt="UNO Logo"
-            className="absolute h-10 w-auto object-contain"
-          />
-        </div>
+        <div className="flex w-auto h-10 items-center gap-4">
+    <img
+    src={sairamLogo}
+    alt="Sairam Logo"
+    className="h-10 w-auto object-contain"
+    />
+    <img
+    src={unoLogo}
+    alt="UNO Logo"
+    className="h-10 w-auto object-contain"
+    />
+    </div>
+
         
         <div className="flex justify-center items-center gap-8">
           <div className="hidden md:flex gap-8">
