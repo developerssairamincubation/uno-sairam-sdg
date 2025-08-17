@@ -2,8 +2,17 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-primary/10 to-background py-20">
-      <div className="flex max-w-screen-xl mx-auto px-4 flex-col items-center gap-20">
+    <section 
+      className="w-full py-20 relative bg-gradient-to-b from-primary/20 to-background/90"
+      style={{
+        backgroundImage: `url('/lovable-uploads/bb1107d1-525b-4e06-a92e-a340db3d4f30.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-background/95"></div>
+      <div className="flex max-w-screen-xl mx-auto px-4 flex-col items-center gap-20 relative z-10">
         <div className="flex max-w-screen-md flex-col items-center gap-8 text-center">
           <div className="flex flex-col items-center gap-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
