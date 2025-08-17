@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import sairamLogo from '/Sairam.png';
+import unoLogo from '/UNO.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,14 +18,14 @@ const Navbar = () => {
       <nav className="flex justify-between items-center w-full max-w-screen-xl mx-auto px-4 py-4">
         <div className="flex w-20 h-10 justify-center items-center relative">
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/2bb304b5e91d34324f9c0adcb10cdd39240adb81?width=130"
-            alt="Conference Logo"
-            className="absolute"
+            src={sairamLogo}
+            alt="Sairam Logo"
+            className="absolute h-10 w-auto object-contain"
           />
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/e677ce3f1506d13a9258ca15aba3265fab538e02?width=124"
-            alt="Institution Logo"
-            className="absolute"
+            src={unoLogo}
+            alt="UNO Logo"
+            className="absolute h-10 w-auto object-contain"
           />
         </div>
         
