@@ -62,14 +62,6 @@ const Navbar = () => {
                 Menu
               </span>
             </button>
-            <button 
-              onClick={() => scrollToSection('register')}
-              className="flex justify-center items-center gap-2 border cursor-pointer text-white text-base font-normal leading-6 bg-black px-5 py-2 border-solid border-black max-sm:text-sm max-sm:px-4 max-sm:py-1.5 hover:bg-gray-800 transition-colors"
-            >
-              <span className="text-white text-base font-normal leading-6 max-sm:text-sm">
-                Register
-              </span>
-            </button>
           </div>
         </div>
       </nav>
