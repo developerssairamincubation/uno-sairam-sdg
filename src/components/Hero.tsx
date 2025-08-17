@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-gray-50 to-white py-20">
+    <section className="w-full bg-gradient-to-b from-gray-50 to-white py-20"  style={{ backgroundImage: "url('/unoCon.jpg')" }}>
       <div className="flex max-w-screen-xl mx-auto px-4 flex-col items-center gap-20">
         <div className="flex max-w-screen-md flex-col items-center gap-8 text-center">
           <div className="flex flex-col items-center gap-6">
