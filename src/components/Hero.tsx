@@ -12,7 +12,7 @@ const Hero = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-background/100"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-background/95"></div>
       <div className="flex max-w-screen-xl mx-auto px-4 flex-col items-center gap-12 relative z-10">
         <div className="flex max-w-screen-md flex-col items-center gap-8 text-center">
           <div className="flex flex-col items-center gap-6">

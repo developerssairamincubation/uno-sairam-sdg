@@ -37,7 +37,7 @@ const CountdownTimer = () => {
       <div className="grid grid-cols-4 gap-4 text-center">
         <div className="bg-white/10 rounded-lg p-3">
           <div className="text-2xl font-bold text-white">{timeLeft.days}</div>
-          <div className="text-sm text-white/100">Days</div>
+          <div className="text-sm text-white/80">Days</div>
         </div>
         <div className="bg-white/10 rounded-lg p-3">
           <div className="text-2xl font-bold text-white">{timeLeft.hours}</div>
