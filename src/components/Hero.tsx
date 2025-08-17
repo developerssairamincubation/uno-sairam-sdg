@@ -1,4 +1,5 @@
 import React from 'react';
+import sairamLogo from '/unoCon.png';
 
 const Hero = () => {
   return (
