@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const EventFeatures = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  
   const features = [
     {
       icon: (
@@ -75,52 +73,6 @@ const EventFeatures = () => {
               </article>
             ))}
           </div>
-        </div>
-        
-        <div className="flex flex-col items-center gap-6 w-full">
-          <button 
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="flex justify-center items-center gap-2 border cursor-pointer text-black text-base font-normal leading-6 px-6 py-3 border-solid border-black hover:bg-gray-50 transition-colors"
-          >
-            <span className="text-black text-base font-normal leading-6">
-              {isExpanded ? 'Show Less' : 'Learn More'}
-            </span>
-          </button>
-          
-          {isExpanded && (
-            <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-black mb-6 text-center">Event Schedule & Speakers</h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-lg text-black">Day 1: Foundation</h4>
-                  <ul className="space-y-2 text-sm text-black">
-                    <li>• Opening Keynote by UN Representatives</li>
-                    <li>• Policy Framework Discussions</li>
-                    <li>• Regional Case Studies</li>
-                    <li>• Networking Session</li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-lg text-black">Day 2: Innovation</h4>
-                  <ul className="space-y-2 text-sm text-black">
-                    <li>• Technology Solutions Showcase</li>
-                    <li>• Startup Pitch Sessions</li>
-                    <li>• Partnership Building Workshops</li>
-                    <li>• Panel Discussions</li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-lg text-black">Day 3: Action</h4>
-                  <ul className="space-y-2 text-sm text-black">
-                    <li>• Implementation Strategies</li>
-                    <li>• Resource Mobilization</li>
-                    <li>• Commitment Declarations</li>
-                    <li>• Closing Ceremony</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </section>
