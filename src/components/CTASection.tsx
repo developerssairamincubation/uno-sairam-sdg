@@ -16,9 +16,9 @@ const CTASection = () => {
             </div>
             
             <div className="flex items-start gap-4 max-sm:flex-col max-sm:w-full">
-              <button className="flex justify-center items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-lg font-medium transition-colors max-sm:w-full">
+              {/* <button className="flex justify-center items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-lg font-medium transition-colors max-sm:w-full">
                 <span>Learn More</span>
-              </button>
+              </button> */}
             </div>
           </div>
           
