@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const FeatureSection = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section className="w-full py-20 bg-white">
       <div className="flex max-w-screen-xl mx-auto px-4 flex-col items-start gap-20">
@@ -43,20 +45,39 @@ const FeatureSection = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-6 max-sm:flex-col max-sm:w-full">
-              <button className="flex justify-center items-center gap-2 border cursor-pointer text-black text-base font-normal leading-6 px-6 py-3 border-solid border-black max-sm:w-full hover:bg-gray-50 transition-colors">
+            <div className="flex flex-col gap-6 w-full">
+              <button 
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="flex justify-center items-center gap-2 border cursor-pointer text-black text-base font-normal leading-6 px-6 py-3 border-solid border-black hover:bg-gray-50 transition-colors w-fit"
+              >
                 <span className="text-black text-base font-normal leading-6">
-                  Learn More
+                  {isExpanded ? 'Show Less' : 'Learn More'}
                 </span>
               </button>
-              <button className="flex justify-center items-center gap-2 cursor-pointer text-black text-base font-normal leading-6 border-none hover:text-gray-600 transition-colors">
-                <span className="text-black text-base font-normal leading-6">
-                  Sign Up
-                </span>
-                <svg width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="chevron-icon">
-                  <path d="M10.2045 6.87158C10.3053 6.87158 10.3823 6.90199 10.4603 6.97998L15.4047 11.9243C15.4586 11.9782 15.4837 12.0202 15.4955 12.0483V12.0493C15.5103 12.0849 15.5189 12.1246 15.5189 12.1733C15.5189 12.222 15.5103 12.2618 15.4955 12.2974V12.2983C15.4837 12.3265 15.4585 12.3684 15.4047 12.4224L10.4359 17.3911C10.3581 17.4689 10.291 17.4907 10.2103 17.4878C10.1163 17.4843 10.0354 17.4524 9.94958 17.3667C9.87146 17.2886 9.84021 17.2117 9.84021 17.1108C9.84021 17.0099 9.87146 16.9331 9.94958 16.855L14.6312 12.1733L9.92419 7.46631C9.84653 7.38861 9.82459 7.3223 9.82751 7.2417C9.83096 7.14743 9.86353 7.06604 9.94958 6.97998C10.0275 6.90217 10.1039 6.87166 10.2045 6.87158Z" fill="black" stroke="black"/>
-                </svg>
-              </button>
+              
+              {isExpanded && (
+                <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                  <h3 className="text-xl font-semibold text-black mb-4">Conference Details</h3>
+                  <div className="space-y-4 text-black">
+                    <p><strong>Date:</strong> March 15-17, 2025</p>
+                    <p><strong>Location:</strong> Sairam Institute Campus, Chennai</p>
+                    <p><strong>Duration:</strong> 3 Days of intensive sessions</p>
+                    <p><strong>Format:</strong> Hybrid (In-person and Virtual participation)</p>
+                    <p><strong>Languages:</strong> English with real-time translation available</p>
+                    <p><strong>Target Audience:</strong> Policy makers, entrepreneurs, NGO leaders, academics, and development practitioners</p>
+                    <div>
+                      <p><strong>Key Sessions Include:</strong></p>
+                      <ul className="list-disc list-inside mt-2 space-y-1">
+                        <li>Technology Innovation for Employment</li>
+                        <li>Public-Private Partnership Models</li>
+                        <li>Skills Training and Capacity Building</li>
+                        <li>Digital Inclusion Strategies</li>
+                        <li>Policy Framework Development</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           

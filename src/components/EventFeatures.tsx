@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const EventFeatures = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
   const features = [
     {
       icon: (
@@ -60,20 +62,50 @@ const EventFeatures = () => {
           </div>
         </div>
         
-        <div className="flex items-center gap-6 max-sm:flex-col max-sm:w-full">
-          <button className="flex justify-center items-center gap-2 border cursor-pointer text-black text-base font-normal leading-6 px-6 py-3 border-solid border-black max-sm:w-full hover:bg-gray-50 transition-colors">
+        <div className="flex flex-col items-center gap-6 w-full">
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex justify-center items-center gap-2 border cursor-pointer text-black text-base font-normal leading-6 px-6 py-3 border-solid border-black hover:bg-gray-50 transition-colors"
+          >
             <span className="text-black text-base font-normal leading-6">
-              Learn More
+              {isExpanded ? 'Show Less' : 'Learn More'}
             </span>
           </button>
-          <button className="flex justify-center items-center gap-2 cursor-pointer text-black text-base font-normal leading-6 border-none hover:text-gray-600 transition-colors">
-            <span className="text-black text-base font-normal leading-6">
-              Sign Up
-            </span>
-            <svg width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.2045 6.87158C10.3053 6.87158 10.3823 6.90199 10.4603 6.97998L15.4047 11.9243C15.4586 11.9782 15.4837 12.0202 15.4955 12.0483V12.0493C15.5103 12.0849 15.5189 12.1246 15.5189 12.1733C15.5189 12.222 15.5103 12.2618 15.4955 12.2974V12.2983C15.4837 12.3265 15.4585 12.3684 15.4047 12.4224L10.4359 17.3911C10.3581 17.4689 10.291 17.4907 10.2103 17.4878C10.1163 17.4843 10.0354 17.4524 9.94958 17.3667C9.87146 17.2886 9.84021 17.2117 9.84021 17.1108C9.84021 17.0099 9.87146 16.9331 9.94958 16.855L14.6312 12.1733L9.92419 7.46631C9.84653 7.38861 9.82459 7.3223 9.82751 7.2417C9.83096 7.14743 9.86353 7.06604 9.94958 6.97998C10.0275 6.90217 10.1039 6.87166 10.2045 6.87158Z" fill="black" stroke="black"/>
-            </svg>
-          </button>
+          
+          {isExpanded && (
+            <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-black mb-6 text-center">Event Schedule & Speakers</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-lg text-black">Day 1: Foundation</h4>
+                  <ul className="space-y-2 text-sm text-black">
+                    <li>• Opening Keynote by UN Representatives</li>
+                    <li>• Policy Framework Discussions</li>
+                    <li>• Regional Case Studies</li>
+                    <li>• Networking Session</li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-lg text-black">Day 2: Innovation</h4>
+                  <ul className="space-y-2 text-sm text-black">
+                    <li>• Technology Solutions Showcase</li>
+                    <li>• Startup Pitch Sessions</li>
+                    <li>• Partnership Building Workshops</li>
+                    <li>• Panel Discussions</li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-lg text-black">Day 3: Action</h4>
+                  <ul className="space-y-2 text-sm text-black">
+                    <li>• Implementation Strategies</li>
+                    <li>• Resource Mobilization</li>
+                    <li>• Commitment Declarations</li>
+                    <li>• Closing Ceremony</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
