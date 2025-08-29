@@ -9,7 +9,12 @@ const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navbarHeight = 100; // Account for increased navbar height
+      const elementPosition = element.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
     setIsMenuOpen(false);
   };
@@ -22,13 +27,13 @@ const Navbar = () => {
             <img
               src={unoLogo}
               alt="UNO Logo"
-              className="h-8 w-auto object-contain transition-transform duration-300 hover:scale-105"
+              className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
             />
             <div className="w-px h-8 bg-border/40"></div>
             <img
               src={sairamLogo}
               alt="Sairam Logo"
-              className="h-8 w-auto object-contain transition-transform duration-300 hover:scale-105"
+              className="h-16 w-auto object-contain transition-transform duration-300 hover:scale-120"
             />
           </div>
         </div>
@@ -57,6 +62,11 @@ const Navbar = () => {
               <div className="absolute inset-0 bg-primary/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
             </button>
           </div>
+          
+          {/* Join Event Button */}
+          <button className="hidden md:flex justify-center items-center gap-2 bg-white text-primary hover:bg-white/90 px-6 py-2 rounded-lg font-medium transition-colors border border-primary/20">
+            <span>Join Event</span>
+          </button>
           
           <div className="flex md:hidden">
             <button
@@ -95,6 +105,9 @@ const Navbar = () => {
                 className="text-left px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-accent/50 rounded-lg transition-all duration-300"
               >
                 Event
+              </button>
+              <button className="flex justify-center items-center gap-2 bg-white text-primary hover:bg-white/90 px-6 py-3 rounded-lg font-medium transition-colors border border-primary/20 mx-4 mt-2">
+                <span>Join Event</span>
               </button>
             </div>
           </div>

@@ -24,8 +24,8 @@ const CTASection = () => {
           
           <div className="flex-1">
             <img
-              src="https://www.innovationtraining.org/storage/2021/02/innovation-meetings-innovative-meeting.jpeg"
-              alt="Conference collaboration and innovation"
+              src="/innovation_ecosystem.jpg"
+              alt="Innovation ecosystem collaboration"
               className="w-full h-auto rounded-xl shadow-lg"
             />
           </div>

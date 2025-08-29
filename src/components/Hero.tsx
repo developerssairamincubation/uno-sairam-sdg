@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import CountdownTimer from './CountdownTimer';
 
 const Hero = () => {
+  const images = [
+    '/lovable-uploads/uno_sairam_01.jpg',
+    '/lovable-uploads/uno_sairam_02.jpg',
+    '/lovable-uploads/uno_sairam_03.jpg',
+    '/lovable-uploads/uno_sairam_04.jpg'
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section 
-      className="w-full py-12 relative bg-gradient-to-b from-primary/20 to-background/90"
+      className="w-full py-12 relative bg-gradient-to-b from-primary/20 to-background/90 transition-all duration-1000 ease-in-out"
       style={{
-        backgroundImage: `url('/lovable-uploads/bb1107d1-525b-4e06-a92e-a340db3d4f30.png')`,
+        backgroundImage: `url('${images[currentImageIndex]}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-background/95"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/70 to-background/60"></div>
       <div className="flex max-w-screen-xl mx-auto px-4 flex-col items-center gap-12 relative z-10">
         <div className="flex max-w-screen-md flex-col items-center gap-8 text-center">
           <div className="flex flex-col items-center gap-6">
@@ -24,7 +41,7 @@ const Hero = () => {
             </p>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30">
               <p className="text-white font-semibold text-lg">
-                4 November 2025 | 11:30 AM - 12:45 PM
+                6 November 2025 | 1.15 pm - 2.30 pm (AST)
               </p>
             </div>
             </div>

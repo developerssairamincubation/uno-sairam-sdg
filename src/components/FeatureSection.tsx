@@ -46,8 +46,8 @@ const FeatureSection = () => {
           
           <div className="flex-1">
             <img
-              src="https://www.unifiedcommunications.com/images/topics/2018/Meeting-Spaces-Hero.jpg"
-              alt="Conference participants collaborating"
+              src="/sdg_sairam.jpeg"
+              alt="SDG Sairam sustainable development goals"
               className="w-full h-auto rounded-xl shadow-lg"
             />
           </div>
