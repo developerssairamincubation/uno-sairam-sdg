@@ -23,8 +23,7 @@ const Footer = () => {
               <div>
                 <h3 className="text-black text-base font-bold mb-2">Phone:</h3>
                 <p className="text-black text-sm leading-relaxed">
-                  +91-44-22512111 / 2251 2333/+91-044-22512222<br />
-                  +91-44-22512444 / +91 86670 59309
+                  +91 86670 59309
                 </p>
               </div>
               
