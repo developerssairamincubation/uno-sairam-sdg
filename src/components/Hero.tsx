@@ -49,9 +49,9 @@ const Hero = () => {
           <CountdownTimer />
           
           <div className="flex items-start gap-4 max-sm:flex-col max-sm:w-full">
-            <button className="flex justify-center items-center gap-2 bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-lg font-medium transition-colors max-sm:w-full">
+            <a href="https://indico.un.org/register/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-lg font-medium transition-colors max-sm:w-full">
               <span>Join Event</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

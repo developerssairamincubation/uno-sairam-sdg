@@ -64,9 +64,9 @@ const Navbar = () => {
           </div>
           
           {/* Join Event Button */}
-          <button className="hidden md:flex justify-center items-center gap-2 bg-white text-primary hover:bg-white/90 px-6 py-2 rounded-lg font-medium transition-colors border border-primary/20">
+          <a href="https://indico.un.org/register/" target="_blank" rel="noopener noreferrer" className="hidden md:flex justify-center items-center gap-2 bg-white text-primary hover:bg-white/90 px-6 py-2 rounded-lg font-medium transition-colors border border-primary/20">
             <span>Join Event</span>
-          </button>
+          </a>
           
           <div className="flex md:hidden">
             <button
@@ -106,9 +106,9 @@ const Navbar = () => {
               >
                 Event
               </button>
-              <button className="flex justify-center items-center gap-2 bg-white text-primary hover:bg-white/90 px-6 py-3 rounded-lg font-medium transition-colors border border-primary/20 mx-4 mt-2">
+              <a href="https://indico.un.org/register/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 bg-white text-primary hover:bg-white/90 px-6 py-3 rounded-lg font-medium transition-colors border border-primary/20 mx-4 mt-2">
                 <span>Join Event</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
