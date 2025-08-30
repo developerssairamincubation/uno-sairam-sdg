@@ -40,7 +40,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="w-full h-px bg-black" />
           <p className="text-black text-sm font-normal text-center">
-            © 2025 Our Conference. All rights reserved by Sairam Institutions.
+            © 2025 UNO Sairam. All rights reserved by Sairam Institutions.
           </p>
         </div>
       </div>
